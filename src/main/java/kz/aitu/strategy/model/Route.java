@@ -1,9 +1,5 @@
 package kz.aitu.strategy.model;
 
-/**
- * Immutable record representing the calculated route between two points.
- * Encapsulates the transport mode, route metrics (distance, duration), and instructions.
- */
 public record Route(
     String travelMode,
     String origin,

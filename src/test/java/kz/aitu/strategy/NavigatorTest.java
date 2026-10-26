@@ -36,7 +36,6 @@ class NavigatorTest {
     void shouldSwitchToWalkStrategyAtRuntime() {
         Navigator navigator = new Navigator(new CarStrategy());
 
-        // Dynamic switch at runtime
         navigator.setStrategy(new WalkStrategy());
         Route route = navigator.planRoute(origin, destination);
 
@@ -51,7 +50,6 @@ class NavigatorTest {
     void shouldSwitchToCycleStrategyAtRuntime() {
         Navigator navigator = new Navigator(new WalkStrategy());
 
-        // Dynamic switch at runtime
         navigator.setStrategy(new CycleStrategy());
         Route route = navigator.planRoute(origin, destination);
 
@@ -66,7 +64,6 @@ class NavigatorTest {
     void shouldSupportNewPublicTransportStrategy() {
         Navigator navigator = new Navigator(new CycleStrategy());
 
-        // Demonstrating Open/Closed Principle
         navigator.setStrategy(new PublicTransportStrategy());
         Route route = navigator.planRoute(origin, destination);
 
